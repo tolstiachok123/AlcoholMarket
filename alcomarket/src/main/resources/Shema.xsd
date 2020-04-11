@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.org/Product"
+        xmlns:tns="http://www.example.org/Product"
+        elementFormDefault="qualified">
+    <element name="alcohol">
+        <complexType>
+            <sequence>
+                <element name="liqueurs" type="tns:Liqueurs" maxOccurs="1"/>
+                <element name="beers" type="tns:Beers" maxOccurs="1"/>
+                <element name="bitters" type="tns:Bitters" maxOccurs="1"/>
+                <element name="hardAlcohols" type="tns:HardAlcohols" maxOccurs="1"/>
+                <element name="tinctures" type="tns:Tinctures" maxOccurs="1"/>
+                <element name="vines" type="tns:Vines" maxOccurs="1"/>
+            </sequence>
+        </complexType>
+    </element>
+
+
+
+    <complexType name="Liqueurs">
+        <sequence>
+            <element name="Liqueur" type="tns:Liqueur" minOccurs="5" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Beers">
+        <sequence>
+            <element name="beer" type="tns:Beer" minOccurs="5" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Bitters">
+        <sequence>
+            <element name="bitter" type="tns:Bitter" minOccurs="5" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="HardAlcohols">
+        <sequence>
+            <element name="hardAlcohol" type="tns:HardAlcohol" minOccurs="5" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Tinctures">
+        <sequence>
+            <element name="tincture" type="tns:Tincture" minOccurs="5" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Vines">
+        <sequence>
+            <element name="vine" type="tns:Vine" minOccurs="5" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+
+
+    <complexType name="Liqueur">
+        <sequence>
+            <element name="base" type="tns:Base" maxOccurs="1"/>
+            <element name="sugarContent" type="positiveInteger" maxOccurs="1" default="33"/>
+        </sequence>
+        <attribute name="ID" type="positiveInteger"/>
+    </complexType>
+
+    <complexType name="Beer">
+        <sequence>
+            <element name="base" type="tns:Base" maxOccurs="1"/>
+            <element name="color" type="string" maxOccurs="1" default="dark"/>
+        </sequence>
+        <attribute name="ID" type="positiveInteger"/>
+    </complexType>
+
+    <complexType name="Bitter">
+        <sequence>
+            <element name="base" type="tns:Base" maxOccurs="1"/>
+            <element name="herbsQuantity" type="positiveInteger" maxOccurs="1" default="15"/>
+        </sequence>
+        <attribute name="ID" type="positiveInteger"/>
+    </complexType>
+
+    <complexType name="HardAlcohol">
+        <sequence>
+            <element name="base" type="tns:Base" maxOccurs="1"/>
+            <element name="rawMaterial" type="string" maxOccurs="1" default="wood"/>
+        </sequence>
+        <attribute name="ID" type="positiveInteger"/>
+    </complexType>
+
+    <complexType name="Tincture">
+        <sequence>
+            <element name="base" type="tns:Base" maxOccurs="1"/>
+            <element name="additive" type="string" maxOccurs="1" default="orange"/>
+        </sequence>
+        <attribute name="ID" type="positiveInteger"/>
+    </complexType>
+
+    <complexType name="Vine">
+        <sequence>
+            <element name="base" type="tns:Base" maxOccurs="1"/>
+            <element name="color" type="string" maxOccurs="1" default="red"/>
+            <element name="type" type="string" maxOccurs="1" default="dry"/>
+            <element name="isItQuiet" type="string" maxOccurs="1" default="true"/>
+        </sequence>
+        <attribute name="ID" type="positiveInteger"/>
+    </complexType>
+
+
+
+    <complexType name="Base">
+        <sequence>
+            <element name="name" type="string" maxOccurs="1"/>
+            <element name="country" type="string" maxOccurs="1" default="Китай"/>
+            <element name="cost" type="positiveInteger" maxOccurs="1" default="33"/>
+            <element name="abv" type="positiveInteger" maxOccurs="1" default="40"/>
+        </sequence>
+    </complexType>
+</schema>
+
+
