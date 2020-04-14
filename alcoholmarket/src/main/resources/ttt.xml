@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alcohol>
+    <liqueurs>
+        <liqueur ID="1">
+            <base>
+                <name>Limonchello</name>
+                <country>Italy</country>
+                <cost>15</cost>
+                <abv>30</abv>
+            </base>
+            <sugarContent>25</sugarContent>
+        </liqueur>
+    </liqueurs>
+    <beers>
+        <beer ID="1">
+            <base>
+                <name></name>
+                <country></country>
+                <cost></cost>
+                <abv></abv>
+            </base>
+            <color></color>
+        </beer>
+    </beers>
+    <bitters>
+        <bitter ID="1">
+            <base>
+                <name></name>
+                <country></country>
+                <cost></cost>
+                <abv></abv>
+            </base>
+            <herbsQuantity></herbsQuantity>
+        </bitter>
+    </bitters>
+    <hardAlcohols>
+        <hardAlcohol ID="1">
+            <base>
+                <name></name>
+                <country></country>
+                <cost></cost>
+                <abv></abv>
+            </base>
+            <rawMaterial></rawMaterial>
+        </hardAlcohol>
+    </hardAlcohols>
+    <tinctures>
+        <tincture ID="1">
+            <base>
+                <name></name>
+                <country></country>
+                <cost></cost>
+                <abv></abv>
+            </base>
+            <additive></additive>
+        </tincture>
+    </tinctures>
+    <vines>
+        <vine ID="1">
+            <base>
+                <name></name>
+                <country></country>
+                <cost></cost>
+                <abv></abv>
+            </base>
+            <color></color>
+            <type></type>
+            <isItQuiet></isItQuiet>
+        </vine>
+    </vines>
+</alcohol>
