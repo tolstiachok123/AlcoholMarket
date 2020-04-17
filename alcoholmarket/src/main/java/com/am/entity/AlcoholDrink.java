@@ -12,13 +12,13 @@ public class AlcoholDrink {
     private String rawMaterial;
     private double sugarContent;
     private String additive;
-    private String isItQuiet;
+    private boolean isItQuiet;
     private int id;
 
     public AlcoholDrink() {
     }
 
-    public AlcoholDrink(Type type, String name, String country, double cost, double adv, String color, int herbsQuantity, String rawMaterial, double sugarContent, String additive, String isItQuiet) {
+    public AlcoholDrink(Type type, String name, String country, double cost, double adv, String color, int herbsQuantity, String rawMaterial, double sugarContent, String additive, boolean isItQuiet) {
         this.type = type;
         this.name = name;
         this.country = country;
@@ -120,11 +120,11 @@ public class AlcoholDrink {
         this.type = type;
     }
 
-    public String getIsItQuiet() {
+    public boolean getIsItQuiet() {
         return isItQuiet;
     }
 
-    public void setIsItQuiet(String isItQuiet) {
+    public void setIsItQuiet(boolean isItQuiet) {
         this.isItQuiet = isItQuiet;
     }
 }
