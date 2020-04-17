@@ -1,7 +1,6 @@
 package com.am.repository;
 
 import com.am.entity.AlcoholDrink;
-import com.am.entity.Tincture;
 import com.am.util.db.DBUtils;
 
 import java.sql.*;
