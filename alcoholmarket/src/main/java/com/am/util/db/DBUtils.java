@@ -7,21 +7,19 @@ import java.util.concurrent.ArrayBlockingQueue;
 
 public class DBUtils {
 
-    private final static String url = "jdbc:mysql://localhost:3306/AlcoholMarket";
-    private final static String user = "";
-    private final static String password = "";
+    private final static String url = "jdbc:mysql://localhost:3306/AlcoholMarket?useUnicode=true&serverTimezone=UTC&useSSL=true&verifyServerCertificate=false";
+    private final static String user = "root";
+    private final static String password = "9109";
 
-    private final static ArrayBlockingQueue<Connection> connections = new ArrayBlockingQueue<Connection>(7);
+    private final static ArrayBlockingQueue<Connection> connections = new ArrayBlockingQueue<Connection>(1);
 
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            for (int i = 0; i < 7; i++) {
-                try {
-                    connections.add(getConnection());
-                } catch (SQLException e) {
-                    System.out.println(e.getStackTrace());
-                }
+            try {
+                connections.add(getConnection());
+            } catch (SQLException e) {
+                System.out.println(e.getStackTrace());
             }
         } catch (ClassNotFoundException e) {
                 System.out.println(e.getStackTrace());

@@ -26,7 +26,7 @@ public class AlcoholDrinkServlet extends HttpServlet {
     @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         String newResponce = req.getParameter("page");
-        String url = "/" + newResponce + ".jsp";
+        String url = "/jsp/" + newResponce;
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(req, res);
     }

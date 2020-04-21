@@ -3,8 +3,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
     <body>
-        <form method="LINK" action="/controler">
+        <form method="post" action="controler">
             <h2>Вам есть 18 лет?</h2>
+            <input name="page" type="hidden" value="alcoholDrinks.jsp">
             <input type="submit" value="Да">
         </form>
     </body>
