@@ -2,7 +2,7 @@ package com.am.entity;
 
 public class AlcoholDrink {
 
-    private Type type;
+    private String type;
     private String name;
     private String country;
     private double cost;
@@ -18,7 +18,7 @@ public class AlcoholDrink {
     public AlcoholDrink() {
     }
 
-    public AlcoholDrink(Type type, String name, String country, double cost, double adv, String color, int herbsQuantity, String rawMaterial, double sugarContent, String additive, boolean isItQuiet) {
+    public AlcoholDrink(String type, String name, String country, double cost, double adv, String color, int herbsQuantity, String rawMaterial, double sugarContent, String additive, boolean isItQuiet) {
         this.type = type;
         this.name = name;
         this.country = country;
@@ -112,11 +112,11 @@ public class AlcoholDrink {
         this.additive = additive;
     }
 
-    public Type getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(String type) {
         this.type = type;
     }
 

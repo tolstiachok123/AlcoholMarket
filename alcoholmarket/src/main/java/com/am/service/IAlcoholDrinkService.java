@@ -8,7 +8,7 @@ public interface IAlcoholDrinkService {
 
     ArrayList<AlcoholDrink> getList();
 
-    void addAlcoholDrink(AlcoholDrink newAlcohol);
+    void addAlcoholDrink(String type, String name, String country, double cost, double ADV, String color, int herbsQuantity, String rawMaterial, double sugarContent, String additive, boolean isItQuiet);
 
    // void delAlcohol(Alcohol dellAlcohol);
 }
