@@ -1,71 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <alcohol> 
-    <liqueurs> 
-        <liqueur ID="1"> 
-            <base> 
-                <name>Limonchello</name> 
-                <country>Italy</country> 
-                <cost>15</cost> 
-                <abv>30</abv> 
-            </base> 
-            <sugarContent>25</sugarContent> 
-        </liqueur> 
-    </liqueurs> 
-    <beers> 
-        <beer ID="1"> 
-            <base> 
-                <name></name> 
-                <country></country> 
-                <cost></cost> 
-                <abv></abv> 
-            </base> 
-            <color></color> 
-        </beer> 
-    </beers> 
-    <bitters> 
-        <bitter ID="1"> 
-            <base> 
-                <name></name> 
-                <country></country> 
-                <cost></cost> 
-                <abv></abv> 
-            </base> 
-            <herbsQuantity></herbsQuantity> 
-        </bitter> 
-    </bitters> 
-    <hardAlcohols> 
-        <hardAlcohol ID="1"> 
-            <base> 
-                <name></name> 
-                <country></country> 
-                <cost></cost> 
-                <abv></abv> 
-            </base> 
-            <rawMaterial></rawMaterial> 
-        </hardAlcohol> 
-    </hardAlcohols> 
-    <tinctures> 
-        <tincture ID="1"> 
-            <base> 
-                <name></name> 
-                <country></country> 
-                <cost></cost> 
-                <abv></abv> 
-            </base> 
-            <additive></additive> 
-        </tincture> 
-    </tinctures> 
-    <vines> 
-        <vine ID="1"> 
-            <base> 
-                <name></name> 
-                <country></country> 
-                <cost></cost> 
-                <abv></abv> 
-            </base> 
-            <color></color> 
-            <type></type> 
-            <isItQuiet></isItQuiet> 
-        </vine> 
-    </vines> 
+	<liqueurs> 
+		<liqueur ID="1"> 
+			<base> 
+				<name>Limonchello</name> 
+				<country>Italy</country> 
+				<cost>15</cost> 
+				<abv>30</abv> 
+			</base> 
+			<sugarContent>25</sugarContent> 
+		</liqueur> 
+		<liqueur ID="2"> 
+			<base> 
+				<name>Amaretto</name> 
+				<country>Italy</country> 
+				<cost>12</cost> 
+				<abv>28</abv> 
+			</base> 
+			<sugarContent>25</sugarContent> 
+		</liqueur> 
+	</liqueurs> 
+	<beers> 
+		<beer ID="3"> 
+			<base> 
+				<name>Lidskoe</name> 
+				<country>Belarus</country> 
+				<cost>2</cost> 
+				<abv>4.5</abv> 
+			</base> 
+			<color>light</color> 
+		</beer> 
+		<beer ID="4"> 
+			<base> 
+				<name>Pale Ale</name> 
+				<country>Scotland</country> 
+				<cost>4</cost> 
+				<abv>4.7</abv> 
+			</base> 
+			<color>light yellow</color> 
+		</beer> 
+		<beer ID="5"> 
+			<base> 
+				<name>Porter</name> 
+				<country>London</country> 
+				<cost>5</cost> 
+				<abv>6</abv> 
+			</base> 
+			<color>dark</color> 
+		</beer> 
+	</beers> 
+	<bitters> 
+		<bitter ID="6"> 
+			<base> 
+				<name>Jagermeister</name> 
+				<country>Deutschland</country> 
+				<cost>17</cost> 
+				<abv>35</abv> 
+			</base> 
+			<herbsQuantity>56</herbsQuantity> 
+		</bitter> 
+		<bitter ID="7"> 
+			<base> 
+				<name>Riga black</name>
+				<country>Latvija</country> 
+				<cost>10</cost> 
+				<abv>40</abv> 
+			</base> 
+			<herbsQuantity>24</herbsQuantity> 
+		</bitter> 
+	</bitters> 
+	<hardAlcohols> 
+		<hardAlcohol ID="8"> 
+			<base> 
+				<name>Vodka</name>
+				<country>Russia</country> 
+				<cost>5</cost> 
+				<abv>40</abv> 
+			</base> 
+			<rawMaterial>wheat</rawMaterial> 
+		</hardAlcohol> 
+		<hardAlcohol ID="9"> 
+			<base> 
+				<name>Whiskey</name>
+				<country>Scotland</country> 
+				<cost>20</cost> 
+				<abv>40</abv> 
+			</base> 
+			<rawMaterial>grains</rawMaterial> 
+		</hardAlcohol> 
+		<hardAlcohol ID="10"> 
+			<base> 
+				<name>Tequila</name>
+				<country>Mexico</country> 
+				<cost>22</cost> 
+				<abv>40</abv> 
+			</base> 
+			<rawMaterial>agave</rawMaterial> 
+		</hardAlcohol> 
+		<hardAlcohol ID="11"> 
+			<base> 
+				<name>Absinthe</name>
+				<country>France</country> 
+				<cost>30</cost> 
+				<abv>70</abv> 
+			</base> 
+			<rawMaterial>sagebrush</rawMaterial> 
+		</hardAlcohol> 
+	</hardAlcohols> 
+	<tinctures> 
+		<tincture ID="12"> 
+			<base> 
+				<name>Medovuha</name> 
+				<country>Russia</country> 
+				<cost>4</cost> 
+				<abv>15</abv> 
+			</base> 
+			<additive>honey</additive> 
+		</tincture> 
+	</tinctures> 
+	<vines> 
+		<vine ID="14"> 
+			<base> 
+				<name>Sauvignon</name> 
+				<country>France</country> 
+				<cost>5</cost> 
+				<abv>11</abv> 
+			</base> 
+			<color>yellow</color> 
+			<type>dry</type> 
+			<isItQuiet>quiet</isItQuiet> 
+		</vine> 
+		<vine ID="15"> 
+			<base> 
+				<name>Muscat</name> 
+				<country>Italy</country> 
+				<cost>6</cost> 
+				<abv>11</abv> 
+			</base> 
+			<color>red</color> 
+			<type>sweet</type> 
+			<isItQuiet>quiet</isItQuiet> 
+		</vine> 
+		<vine ID="16"> 
+			<base> 
+				<name>PortWine</name> 
+				<country>Portugal</country> 
+				<cost>9</cost> 
+				<abv>16</abv> 
+			</base> 
+			<color>red</color> 
+			<type>sweet</type> 
+			<isItQuiet>quiet</isItQuiet> 
+		</vine> 
+	</vines> 
 </alcohol>
