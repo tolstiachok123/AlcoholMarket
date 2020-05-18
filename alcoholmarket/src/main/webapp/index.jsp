@@ -1,12 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<html>
-    <body>
-        <form method="post" action="controler">
-            <h2>Вам есть 18 лет?</h2>
-            <input name="page" type="hidden" value="alcoholDrinks.jsp">
-            <input type="submit" value="Да">
-        </form>
-    </body>
-</html>
+<header>
+    <a href="/mainPage">Page for all</a><b> | </b>
+    <a href="/payment">Page for authenticated</a><b> | </b>
+    <a href="/totalControl">Page for authorized (ADMIN)</a><b> | </b>
+    <a href="/logout">Logout</a>
+</header>

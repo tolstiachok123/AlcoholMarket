@@ -1,6 +1,6 @@
-package com.am.util.db;
+package com.am.dao.impl;
 
-import com.am.entity.AlcoholDrink;
+import com.am.model.AlcoholDrink;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

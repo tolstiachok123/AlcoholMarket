@@ -5,15 +5,18 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServlet;
-
 @Controller
-public class AlcoholDrinkServlet extends HttpServlet {
+public class AlcoholDrinkServlet {
 
     @RequestMapping(value = "/oneType", method = RequestMethod.GET)
-    public String showLiqueurs(ModelMap model){
+    public String showOneType(ModelMap model) {
         model.addAttribute("alcohol", "fuck off, it's monday, go to the job!");
-        return "selection";
+        return "mainPage";
     }
 
+    @RequestMapping(value = "/mainPage", method = RequestMethod.GET)
+    public String mainPage(ModelMap model) {
+        model.addAttribute("alcohol", "fuck off, it's monday, go to the job!");
+        return "mainPage";
+    }
 }
