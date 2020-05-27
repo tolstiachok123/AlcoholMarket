@@ -12,11 +12,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class AppSecurityProvider implements AuthenticationProvider {
 
     @Autowired
@@ -25,6 +27,9 @@ public class AppSecurityProvider implements AuthenticationProvider {
     @Autowired
     private RoleDao roleDao;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
         User user = userDao.findByUsername(authentication.getName());
@@ -32,10 +37,10 @@ public class AppSecurityProvider implements AuthenticationProvider {
             throw new UsernameNotFoundException(String.format("User not found: %s", authentication.getName()));
         }
         String password = authentication.getCredentials().toString();
-        if (!password.equals(user.getPassword())) {
+        if (!passwordEncoder.matches(password, user.getPassword())) {
             throw new BadCredentialsException("Incorrect username or password");
         }
-        ArrayList<Role> roles = roleDao.findAllRoles();
+        List<Role> roles = roleDao.findAllRoles(user.getId());
         List<SimpleGrantedAuthority> authorities = roles.stream().map(it -> new SimpleGrantedAuthority("ROLE_" + it.getRole())).collect(Collectors.toList());
         return new UsernamePasswordAuthenticationToken(user, null, authorities);
     }

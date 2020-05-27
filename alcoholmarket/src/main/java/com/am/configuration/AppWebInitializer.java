@@ -1,12 +1,13 @@
 package com.am.configuration;
 
+import com.am.configuration.security.WebAppSecurityConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class AppWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class[]{WebAppSecurityConfig.class};
     }
 
     @Override
@@ -16,6 +17,6 @@ public class AppWebInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected String[] getServletMappings() {
-        return new String[0];
+        return new String[]{"/"};
     }
 }

@@ -2,9 +2,9 @@ package com.am.dao;
 
 import com.am.model.Role;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface RoleDao {
 
-    ArrayList<Role> findAllRoles();
+    List<Role> findAllRoles(Integer userId);
 }
